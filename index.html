@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+ 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>আর্টিকেল রাইটার নিয়োগ | Grow With Jinan</title>
+    <script>
+     <meta name="monetag" content="4d03d68df1790cbf644e1ffa3d36872e">
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(180deg, #f8f9ff 0%, #eef2ff 100%);
+      color: #1f2937;
+      line-height: 1.7;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: #4f46e5;
+    }
+
+    .hero {
+      padding: 65px 0 45px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: #eef2ff;
+      color: #4338ca;
+      border: 1px solid #c7d2fe;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      line-height: 1.25;
+      margin-bottom: 16px;
+      color: #111827;
+    }
+
+    .hero p {
+      max-width: 780px;
+      margin: 0 auto 24px;
+      font-size: 18px;
+      color: #4b5563;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-size: 16px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #4f46e5, #7c3aed);
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      opacity: 0.96;
+    }
+
+    .btn-secondary {
+      border: 1px solid #c7d2fe;
+      color: #4338ca;
+      background: #fff;
+    }
+
+    .btn-secondary:hover {
+      background: #f5f7ff;
+    }
+
+    .sub-note {
+      margin-top: 12px;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    .section {
+      padding: 58px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 31px;
+      margin-bottom: 14px;
+      color: #111827;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 36px;
+      color: #6b7280;
+      font-size: 16px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      border: 1px solid #eef2ff;
+    }
+
+    .card .icon {
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #e0e7ff, #ede9fe);
+      font-size: 24px;
+      margin-bottom: 14px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    .card p,
+    .card ul li {
+      color: #6b7280;
+      font-size: 15px;
+    }
+
+    .highlight-box {
+      text-align: center;
+      background: #fff;
+      border-radius: 18px;
+      padding: 20px;
+      font-weight: 600;
+      color: #4338ca;
+      box-shadow: 0 10px 24px rgba(79, 70, 229, 0.07);
+      border: 1px solid #eef2ff;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    .step {
+      background: #fff;
+      border-radius: 20px;
+      padding: 28px 24px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      border: 1px solid #eef2ff;
+    }
+
+    .step-number {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(90deg, #4f46e5, #7c3aed);
+      color: #fff;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .info-panel {
+      background: #fff;
+      border-radius: 24px;
+      padding: 34px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      border: 1px solid #eef2ff;
+    }
+
+    .info-panel h3 {
+      font-size: 24px;
+      margin-bottom: 14px;
+      color: #111827;
+    }
+
+    .info-panel p {
+      color: #6b7280;
+      margin-bottom: 14px;
+    }
+
+    .salary-wrap {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .salary-card {
+      background: linear-gradient(180deg, #ffffff 0%, #f8faff 100%);
+      border: 1px solid #e5e7ff;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 10px 24px rgba(79, 70, 229, 0.06);
+    }
+
+    .salary-card h4 {
+      font-size: 22px;
+      color: #4338ca;
+      margin-bottom: 10px;
+    }
+
+    .salary-card p {
+      color: #6b7280;
+      margin-bottom: 8px;
+    }
+
+    .salary-tag {
+      display: inline-block;
+      margin-top: 10px;
+      background: #eef2ff;
+      color: #4338ca;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .action-buttons-box {
+      background: #fff;
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      border: 1px solid #eef2ff;
+      text-align: center;
+    }
+
+    .action-buttons-box h3 {
+      font-size: 24px;
+      color: #111827;
+      margin-bottom: 10px;
+    }
+
+    .action-buttons-box p {
+      color: #6b7280;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .trust-box {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 24px;
+      padding: 32px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      border: 1px solid #eef2ff;
+    }
+
+    .cta-section {
+      padding: 60px 0 72px;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, #4338ca, #7c3aed);
+      color: #fff;
+      border-radius: 28px;
+      padding: 42px 24px;
+      text-align: center;
+      box-shadow: 0 16px 40px rgba(79, 70, 229, 0.25);
+    }
+
+    .cta-box h2 {
+      font-size: 32px;
+      margin-bottom: 14px;
+    }
+
+    .cta-box p {
+      max-width: 720px;
+      margin: 0 auto 24px;
+      color: #eef2ff;
+    }
+
+    .cta-box .btn-primary {
+      background: #fff;
+      color: #4338ca;
+      box-shadow: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 0 42px;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    @media (max-width: 950px) {
+      .grid-3,
+      .grid-4,
+      .steps,
+      .salary-wrap {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .grid-3,
+      .grid-4,
+      .steps,
+      .salary-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 38px;
+      }
+
+      .hero h1 {
+        font-size: 27px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section-title {
+        font-size: 24px;
+      }
+
+      .cta-box h2 {
+        font-size: 24px;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .btn-group {
+        flex-direction: column;
+      }
+
+      .info-panel,
+      .action-buttons-box {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="container">
+    <div class="logo">Grow With Jinan</div>
+  </header>
+
+  <section class="hero container">
+    <div class="hero-badge">Article Writer Recruitment</div>
+    <h1>আমাদের ওয়েবসাইটের জন্য দক্ষ আর্টিকেল রাইটার প্রয়োজন</h1>
+    <p>
+      আপনি যদি নিয়মিত, মানসম্মত এবং পাঠকবান্ধব আর্টিকেল লিখতে আগ্রহী হন, তাহলে এই সুযোগটি আপনার জন্য হতে পারে।
+      আমরা এমন রাইটার খুঁজছি যারা নির্দেশনা মেনে কাজ করতে পারে, SEO সম্পর্কে ধারণা রাখে এবং নির্ধারিত মান বজায় রেখে লিখতে আগ্রহী।
+    </p>
+
+    <div class="btn-group">
+      <a href="https://omg10.com/4/10736825" class="btn btn-primary" target="_blank">বিস্তারিত জানতে ক্লিক করুন</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeFtoVjNwWJrHDc-rafQBDbKwJWdJEa3u0kU0E9ZofbNlcV_A/viewform?usp=publish-editor" class="btn btn-secondary" target="_blank">এখনই আবেদন করুন</a>
+      <a href="https://omg10.com/4/10736825" class="btn btn-secondary">যোগ্যতা দেখুন</a>
+    </div>
+
+    <div class="sub-note">সব তথ্য সহজভাবে সাজানো আছে — আগে পড়ে তারপর সিদ্ধান্ত নিন</div>
+  </section>
+
+  <section class="section container">
+    <h2 class="section-title">কেন আমরা রাইটার নিচ্ছি</h2>
+    <p class="section-subtitle">
+      আমাদের ওয়েবসাইটে নিয়মিত তথ্যভিত্তিক ও মানসম্মত কনটেন্ট প্রকাশ করা হয়। ভালো কনটেন্টের মাধ্যমে একটি ওয়েবসাইট ধীরে ধীরে পাঠক পায়, ভিজিটর বাড়ে এবং দীর্ঘমেয়াদে সেটি একটি শক্তিশালী ডিজিটাল সম্পদে পরিণত হয়। তাই আমরা দায়িত্বশীল ও শিখতে আগ্রহী রাইটারদের নিয়ে কাজ করতে চাই।
+    </p>
+
+    <div class="grid grid-4">
+      <div class="highlight-box">নিয়মিত কনটেন্ট প্রকাশ</div>
+      <div class="highlight-box">মানসম্মত লেখা প্রাধান্য</div>
+      <div class="highlight-box">নতুনদের শেখার সুযোগ</div>
+      <div class="highlight-box">দীর্ঘমেয়াদি কাজের সুযোগ</div>
+    </div>
+  </section>
+
+  <section class="section container" id="requirements">
+    <h2 class="section-title">আর্টিকেল রাইটার হিসেবে কী কী যোগ্যতা দরকার</h2>
+    <p class="section-subtitle">
+      শুধু লিখতে পারলেই হবে না, লেখাকে পাঠকবান্ধব, গুছানো এবং ওয়েবসাইট উপযোগী করতে কিছু মৌলিক দক্ষতাও প্রয়োজন।
+    </p>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="icon">✍️</div>
+        <h3>স্পষ্ট ও গুছানো লেখার দক্ষতা</h3>
+        <p>
+          আপনার লেখায় অপ্রয়োজনীয় ঘোরাঘুরি থাকা যাবে না। সহজ ভাষায়, পরিষ্কারভাবে এবং পাঠকের বোঝার মতো করে লিখতে পারতে হবে।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔍</div>
+        <h3>ব্লগার ও SEO সম্পর্কে ধারণা</h3>
+        <p>
+          Blogger-এ কাজ করার মৌলিক ধারণা থাকতে হবে। পাশাপাশি basic SEO যেমন keyword placement, heading structure, readability এবং user-friendly লেখা সম্পর্কে ধারণা থাকলে ভালো।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📄</div>
+        <h3>১৫০০ শব্দের মানসম্মত আর্টিকেল</h3>
+        <p>
+          প্রতিটি আর্টিকেল সাধারণত প্রায় 1500 word এর হবে। শুধু word fill করলেই হবে না, useful এবং natural flow বজায় রাখতে হবে।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🚫</div>
+        <h3>AI দিয়ে লেখা জমা দেওয়া যাবে না</h3>
+        <p>
+          সম্পূর্ণ AI-generated লেখা গ্রহণযোগ্য হবে না। লেখাটি মানবিক tone-এ, তথ্যভিত্তিক এবং নিজে বুঝে লিখতে হবে। প্রয়োজনে research করে নিজের মতো করে উপস্থাপন করতে হবে।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🧠</div>
+        <h3>নির্দেশনা বুঝে কাজ করার মানসিকতা</h3>
+        <p>
+          আমরা topic, keyword এবং basic direction দিয়ে দেব। সেগুলো বুঝে গুছিয়ে আর্টিকেল লিখে দিতে হবে।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⏱️</div>
+        <h3>সময় মেনে কাজ জমা দেওয়ার অভ্যাস</h3>
+        <p>
+          সময়মতো article submit করতে হবে। নিয়মিত কাজ করতে পারলে দীর্ঘমেয়াদে কাজের সুযোগ আরও ভালো হয়।
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="info-panel">
+      <h3>যারা একদম নতুন, তাদের জন্যও সুযোগ আছে</h3>
+      <p>
+        অনেকেই ভাবেন, আগে থেকে সবকিছু না জানলে article writing শুরু করা যায় না। আসলে বিষয়টি তা নয়। আপনি যদি শিখতে আগ্রহী হন এবং নির্দেশনা মেনে কাজ করতে চান, তাহলে আমরা শুরুতে প্রয়োজনীয় বিষয়গুলো বুঝিয়ে দিই।
+      </p>
+      <p>
+        keyword আমরা দেব, topic আমরা দেব, basic direction-ও আমরা বুঝিয়ে দেব। আপনার কাজ হবে বিষয়টি বুঝে স্বাভাবিক, useful এবং পাঠকবান্ধব ভাষায় লিখে দেওয়া।
+      </p>
+    </div>
+  </section>
+
+  <section class="section container">
+    <h2 class="section-title">আমাদের এখানে কাজের ধরন কেমন</h2>
+    <p class="section-subtitle">
+      আমরা ইতোমধ্যে কয়েকজন রাইটারের সাথে কাজ করছি। কাজের মান, নিয়মিততা এবং দায়িত্ব অনুযায়ী writer category আলাদা হতে পারে।
+    </p>
+
+    <div class="salary-wrap">
+      <div class="salary-card">
+        <h4>General Writer</h4>
+        <p>
+          যারা নিয়মিত basic level থেকে মাঝারি মানের article লিখে থাকে, তাদের আমরা General Writer category-তে রাখি।
+        </p>
+        <p>
+          সাধারণভাবে ৩০ দিনের মধ্যে ৩০টি article complete করলে monthly 3000 টাকা পর্যন্ত payment structure রাখা হয়।
+        </p>
+        <div class="salary-tag">মাসিক 3000 টাকা</div>
+      </div>
+
+      <div class="salary-card">
+        <h4>Elite Writer</h4>
+        <p>
+          যাদের writing quality, structure, readability এবং দায়িত্ববোধ ভালো, তারা ধীরে ধীরে Elite Writer level-এ যেতে পারে।
+        </p>
+        <p>
+          এই category-র writer-দের জন্য monthly 6000 টাকা পর্যন্ত salary structure রাখা হয়, কাজের মান ও consistency অনুযায়ী।
+        </p>
+        <div class="salary-tag">মাসিক 6000 টাকা</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="info-panel">
+      <h3>পার্ট-টাইম কাজ করতে চাইলে কীভাবে payment হবে</h3>
+      <p>
+        সবাই monthly basis-এ কাজ করতে চান না। কেউ কেউ পড়াশোনা বা অন্য কাজের পাশাপাশি part-time basis-এ article writing করতে চান। তাদের জন্য per article payment option রাখা আছে।
+      </p>
+      <p>
+        part-time writer-দের ক্ষেত্রে প্রতি article 100 টাকা করে payment দেওয়া হয়। অর্থাৎ আপনি যতগুলো accepted article জমা দেবেন, সেই অনুযায়ী payment হিসাব করা হবে।
+      </p>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="action-buttons-box">
+      <h3>আরও জানতে নিচের অপশনগুলো দেখুন</h3>
+      <p>
+        আপনি চাইলে নিচের যেকোনো অপশনে ক্লিক করে আবেদন, বিস্তারিত, যোগাযোগ বা পরবর্তী ধাপে যেতে পারেন।
+      </p>
+
+      <div class="btn-group">
+        <a href="https://omg10.com/4/10736825" class="btn btn-primary" target="_blank">Apply Now</a>
+        <a href="https://omg10.com/4/10736825" class="btn btn-secondary" target="_blank">Full Details</a>
+        <a href="contact us.html" class="btn btn-secondary" target="_blank">Contact Us</a>
+        <a href="https://omg10.com/4/10736825" class="btn btn-secondary" target="_blank">Writer Guideline</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <h2 class="section-title">আমরা কী কী support দিই</h2>
+    <p class="section-subtitle">
+      কাজ শুধু দেওয়াই নয়, কাজটা যেন ঠিকভাবে করা যায় সেটাও আমরা গুরুত্ব দিই।
+    </p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Topic & Keyword আমরা দিই</h3>
+        <p>
+          আপনাকে topic খুঁজে বের করতে হবে না। আমরা keyword এবং topic provide করব।
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Basic guideline বুঝিয়ে দিই</h3>
+        <p>
+          আর্টিকেলের ধরন, structure, tone এবং কীভাবে লিখতে হবে — সেগুলো সহজভাবে বুঝিয়ে দেওয়া হবে।
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>ধীরে ধীরে skill improve করা যায়</h3>
+        <p>
+          শুরুতে perfect না হলেও সমস্যা নেই। শেখার মানসিকতা থাকলে ধীরে ধীরে writing quality improve করা সম্ভব।
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="trust-box">
+      <h2 class="section-title" style="margin-bottom: 10px;">এই কাজটি কার জন্য ভালো হতে পারে</h2>
+      <p>
+        আপনি যদি online writing শিখতে চান, website content নিয়ে কাজ করতে আগ্রহী হন, নিয়মিত practice করতে চান এবং ধীরে ধীরে skill build করতে চান — তাহলে এই কাজটি আপনার জন্য ভালো একটি সুযোগ হতে পারে।
+      </p>
+    </div>
+  </section>
+
+  <section class="cta-section container">
+    <div class="cta-box">
+      <h2>আরও জানতে বা কাজ শুরু করতে প্রস্তুত?</h2>
+      <p>
+        নিচের যেকোনো বাটনে ক্লিক করে আপনি আবেদন, বিস্তারিত, যোগাযোগ বা পরবর্তী তথ্য দেখতে পারবেন।
+      </p>
+
+      <div class="btn-group">
+        <a href="https://omg10.com/4/10736825" class="btn btn-primary" target="_blank">এখনই আবেদন করুন</a>
+        <a href="https://omg10.com/4/10736825" class="btn btn-primary" target="_blank">সম্পূর্ণ তথ্য দেখুন</a>
+        <a href="https://omg10.com/4/10736825" class="btn btn-primary" target="_blank">কাজের নিয়ম দেখুন</a>
+        <a href="contact us.html" class="btn btn-primary" target="_blank">যোগাযোগ করুন</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="container">
+    এই পেজটি তথ্যভিত্তিক সহায়তার জন্য তৈরি করা হয়েছে।
+  </footer>
+
+</body>
+</html>

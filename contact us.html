@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Grow With Jinan</title>
+  <script>
+     <meta name="monetag" content="4d03d68df1790cbf644e1ffa3d36872e">
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(180deg, #f8f9ff 0%, #eef2ff 100%);
+      color: #1f2937;
+      line-height: 1.7;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: #4f46e5;
+    }
+
+    .hero {
+      padding: 65px 0 45px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: #eef2ff;
+      color: #4338ca;
+      border: 1px solid #c7d2fe;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      line-height: 1.25;
+      margin-bottom: 16px;
+      color: #111827;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 24px;
+      font-size: 18px;
+      color: #4b5563;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-size: 16px;
+      font-weight: 600;
+      transition: 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #4f46e5, #7c3aed);
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      opacity: 0.96;
+    }
+
+    .btn-secondary {
+      border: 1px solid #c7d2fe;
+      color: #4338ca;
+      background: #fff;
+    }
+
+    .btn-secondary:hover {
+      background: #f5f7ff;
+    }
+
+    .sub-note {
+      margin-top: 12px;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    .section {
+      padding: 58px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 31px;
+      margin-bottom: 14px;
+      color: #111827;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 36px;
+      color: #6b7280;
+      font-size: 16px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      border: 1px solid #eef2ff;
+    }
+
+    .card h3 {
+      font-size: 24px;
+      color: #111827;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #6b7280;
+      margin-bottom: 14px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 16px;
+      border: 1px solid #eef2ff;
+      border-radius: 18px;
+      background: #fbfcff;
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      min-width: 50px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #e0e7ff, #ede9fe);
+      font-size: 22px;
+    }
+
+    .contact-item h4 {
+      font-size: 18px;
+      color: #111827;
+      margin-bottom: 4px;
+    }
+
+    .contact-item span,
+    .contact-item a {
+      color: #6b7280;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .contact-item a:hover {
+      color: #4338ca;
+    }
+
+    form {
+      display: grid;
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .input-group {
+      display: grid;
+      gap: 8px;
+    }
+
+    label {
+      font-size: 15px;
+      font-weight: 600;
+      color: #374151;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid #dbe3ff;
+      background: #fff;
+      outline: none;
+      font-size: 15px;
+      color: #1f2937;
+      transition: 0.2s ease;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #7c3aed;
+      box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.08);
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .small-text {
+      font-size: 13px;
+      color: #6b7280;
+      margin-top: 6px;
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .mini-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 10px 24px rgba(79, 70, 229, 0.06);
+      border: 1px solid #eef2ff;
+      text-align: center;
+    }
+
+    .mini-card .mini-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 14px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #e0e7ff, #ede9fe);
+      font-size: 24px;
+    }
+
+    .mini-card h4 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: #111827;
+    }
+
+    .mini-card p {
+      color: #6b7280;
+      font-size: 15px;
+    }
+
+    .faq {
+      display: grid;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .faq-item {
+      background: #fff;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+      border: 1px solid #eef2ff;
+    }
+
+    .faq-item h4 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: #111827;
+    }
+
+    .faq-item p {
+      color: #6b7280;
+      margin-bottom: 0;
+    }
+
+    .cta-section {
+      padding: 60px 0 72px;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, #4338ca, #7c3aed);
+      color: #fff;
+      border-radius: 28px;
+      padding: 42px 24px;
+      text-align: center;
+      box-shadow: 0 16px 40px rgba(79, 70, 229, 0.25);
+    }
+
+    .cta-box h2 {
+      font-size: 32px;
+      margin-bottom: 14px;
+    }
+
+    .cta-box p {
+      max-width: 720px;
+      margin: 0 auto 24px;
+      color: #eef2ff;
+    }
+
+    .cta-box .btn-primary {
+      background: #fff;
+      color: #4338ca;
+      box-shadow: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 0 42px;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    @media (max-width: 950px) {
+      .contact-grid,
+      .mini-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .contact-grid,
+      .mini-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 38px;
+      }
+
+      .hero h1 {
+        font-size: 27px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section-title {
+        font-size: 24px;
+      }
+
+      .cta-box h2 {
+        font-size: 24px;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .btn-group {
+        flex-direction: column;
+      }
+
+      .card {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="container">
+    <div class="logo">Grow With Jinan</div>
+  </header>
+
+  <section class="hero container">
+    <div class="hero-badge">Contact Us</div>
+    <h1>আমাদের সাথে সহজে যোগাযোগ করুন</h1>
+    <p>
+      আপনার যদি আর্টিকেল রাইটিং, ওয়েবসাইট কনটেন্ট, কাজের নিয়ম, আবেদন প্রক্রিয়া বা অন্য যেকোনো বিষয়ে প্রশ্ন থাকে,
+      তাহলে নিচের যেকোনো মাধ্যমে আমাদের সাথে যোগাযোগ করতে পারেন।
+    </p>
+
+    <div class="btn-group">
+      <a href="https://wa.me/8801765379226" class="btn btn-primary" target="_blank">WhatsApp এ যোগাযোগ</a>
+      <a href="https://www.facebook.com/GrowWithJinan" class="btn btn-secondary" target="_blank">Facebook Page</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeFtoVjNwWJrHDc-rafQBDbKwJWdJEa3u0kU0E9ZofbNlcV_A/viewform?usp=dialog" class="btn btn-secondary">ফর্ম পূরণ করুন</a>
+    </div>
+
+    <div class="sub-note">আমরা চেষ্টা করি যত দ্রুত সম্ভব reply দিতে</div>
+  </section>
+
+  <section class="section container">
+    <h2 class="section-title">যোগাযোগের মাধ্যম</h2>
+    <p class="section-subtitle">
+      আপনি যেটাতে স্বাচ্ছন্দ্যবোধ করেন, সেই মাধ্যমেই যোগাযোগ করতে পারেন।
+    </p>
+
+    <div class="contact-grid">
+      <div class="card">
+        <h3>Direct Contact Information</h3>
+        <p>
+          কাজের বিষয়ে জানতে, writer হিসেবে join করতে, guideline নিতে বা collaboration সংক্রান্ত কথা বলতে নিচের তথ্যগুলো ব্যবহার করুন।
+        </p>
+
+        <div class="contact-list">
+          <div class="contact-item">
+            <div class="icon">📞</div>
+            <div>
+              <h4>ফোন নাম্বার</h4>
+              <span>+880 01765379226</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon">💬</div>
+            <div>
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/8801765379226" target="_blank">Massage Us</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon">📧</div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:jinanjubery070@gmail.com"> Mail Us</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon">🌐</div>
+            <div>
+              <h4>Website</h4>
+              <a href="https://www.creativeinfo360.com/" target="_blank">Visit Our Website</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon">📘</div>
+            <div>
+              <h4>Facebook Page</h4>
+              <a href="https://www.facebook.com/GrowWithJinan" target="_blank">Visit Our Page</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="contact-form">
+        <h3>Quick Contact Form</h3>
+        <p>
+          নিচের form টি fill up করে আপনার message পাঠাতে পারেন। চাইলে এটাকে পরে Google Form link বা backend এর সাথে connect করতে পারবা।
+        </p>
+
+        <form action="#" method="post">
+          <div class="input-group">
+            <label for="name">আপনার নাম</label>
+            <input type="text" id="name" name="name" placeholder="আপনার নাম লিখুন" />
+          </div>
+
+          <div class="input-group">
+            <label for="phone">মোবাইল নাম্বার</label>
+            <input type="text" id="phone" name="phone" placeholder="আপনার নাম্বার লিখুন" />
+          </div>
+
+          <div class="input-group">
+            <label for="email">ইমেইল (ঐচ্ছিক)</label>
+            <input type="email" id="email" name="email" placeholder="আপনার ইমেইল লিখুন" />
+          </div>
+
+          <div class="input-group">
+            <label for="subject">বিষয়</label>
+            <select id="subject" name="subject">
+              <option value="">একটি বিষয় নির্বাচন করুন</option>
+              <option>Article Writer Job</option>
+              <option>Part-time Writing</option>
+              <option>SEO Content Writing</option>
+              <option>Website Collaboration</option>
+              <option>General Inquiry</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="message">মেসেজ</label>
+            <textarea id="message" name="message" placeholder="আপনার মেসেজ লিখুন"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">মেসেজ পাঠান</button>
+          <div class="small-text">
+            Note: এই form submit button বর্তমানে demo হিসেবে আছে। চাইলে পরে backend / email / Google Form এর সাথে যুক্ত করতে পারবা।
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <h2 class="section-title">আমরা কোন বিষয়ে সাহায্য করি</h2>
+    <p class="section-subtitle">
+      নিচের যেকোনো বিষয়ে আপনি আমাদের সাথে কথা বলতে পারেন।
+    </p>
+
+    <div class="mini-grid">
+      <div class="mini-card">
+        <div class="mini-icon">✍️</div>
+        <h4>Article Writing</h4>
+        <p>আর্টিকেল রাইটিং কাজ, requirement, guideline এবং payment structure সম্পর্কে জানতে পারবেন।</p>
+      </div>
+
+      <div class="mini-card">
+        <div class="mini-icon">📈</div>
+        <h4>SEO Content</h4>
+        <p>SEO-friendly article, keyword-based লেখা এবং website content নিয়ে প্রশ্ন করতে পারবেন।</p>
+      </div>
+
+      <div class="mini-card">
+        <div class="mini-icon">🤝</div>
+        <h4>Collaboration</h4>
+        <p>Collaboration, promotion, team work বা long-term content support বিষয়েও যোগাযোগ করা যাবে।</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <h2 class="section-title">Working Hours</h2>
+    <p class="section-subtitle">
+      নিচের সময়ের মধ্যে যোগাযোগ করলে দ্রুত response পাওয়ার সম্ভাবনা বেশি।
+    </p>
+
+    <div class="mini-grid">
+      <div class="mini-card">
+        <div class="mini-icon">🕘</div>
+        <h4>সকাল</h4>
+        <p>৯:০০ AM – ১:০০ PM</p>
+      </div>
+
+      <div class="mini-card">
+        <div class="mini-icon">🕓</div>
+        <h4>বিকেল</h4>
+        <p>৩:০০ PM – ৭:০০ PM</p>
+      </div>
+
+      <div class="mini-card">
+        <div class="mini-icon">⚡</div>
+        <h4>Quick Reply</h4>
+        <p>WhatsApp এবং Facebook message-এ সাধারণত দ্রুত reply দেওয়া হয়।</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <h2 class="section-title">ছোট কিছু প্রশ্নের উত্তর</h2>
+    <p class="section-subtitle">
+      অনেকেই যোগাযোগ করার আগে এই প্রশ্নগুলো করে থাকে।
+    </p>
+
+    <div class="faq">
+      <div class="faq-item">
+        <h4>নতুন হলে যোগাযোগ করা যাবে?</h4>
+        <p>হ্যাঁ, অবশ্যই। আপনি নতুন হলেও আগ্রহ থাকলে যোগাযোগ করতে পারেন। basic বিষয়গুলো বুঝিয়ে দেওয়া হবে।</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>শুধু part-time কাজ করতে চাইলে হবে?</h4>
+        <p>হ্যাঁ, part-time basis-এও কথা বলা যাবে। কাজের ধরন এবং availability অনুযায়ী আলোচনা করা হবে।</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>কোন মাধ্যমে যোগাযোগ করলে ভালো?</h4>
+        <p>দ্রুত response পেতে চাইলে WhatsApp বা Facebook page message ভালো option হতে পারে।</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section container">
+    <div class="cta-box">
+      <h2>আজই যোগাযোগ করতে চান?</h2>
+      <p>
+        নিচের যেকোনো বাটনে ক্লিক করে এখনই যোগাযোগ করুন।
+      </p>
+
+      <div class="btn-group">
+        <a href="https://wa.me/8801765379226" class="btn btn-primary" target="_blank">WhatsApp Message</a>
+        <a href="mailto:jinanjubery070@gmail.com" class="btn btn-primary">Send Email</a>
+        <a href="https://www.facebook.com/GrowWithJinan" class="btn btn-primary" target="_blank">Facebook Page</a>
+        <a href="https://www.creativeinfo360.com/" class="btn btn-primary" target="_blank">Visit Website</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="container">
+    © 2026 Grow With Jinan — এই পেজটি যোগাযোগ ও সহায়তার জন্য তৈরি করা হয়েছে।
+  </footer>
+
+</body>
+</html>
